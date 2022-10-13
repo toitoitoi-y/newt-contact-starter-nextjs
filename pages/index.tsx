@@ -12,7 +12,7 @@ const Home: NextPage = () => {
       <Layout>
         <div className={styles.Contact}>
           <h1 className={styles.Contact_Title}>Contact us</h1>
-          <p className={styles.Contact_Text}>Please fill this form in a decent manner</p>
+          <p className={styles.Contact_Text}>Please fill this form in a decent manner.</p>
           <form className={styles.Contact_Form}>
             <label className={styles.Contact_Label}>Full Name*</label>
             <input type="text" className={styles.Contact_InputText} required />

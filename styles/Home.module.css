@@ -4,15 +4,16 @@
   padding: 40px 36px;
 }
 .Contact_Title {
-  font-size: 3.4rem;
-  margin: 0;
+  font-size: 3.2rem;
+  margin: 0 0 4px 0;
   padding: 0;
   text-align: center;
   line-height: 1.5;
 }
 .Contact_Text {
-  font-size: 1.4rem;
-  margin: 0 0 32px 0;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin: 0 0 48px 0;
   padding: 0;
   color: #888;
   text-align: center;
@@ -58,7 +59,7 @@
   font-size: 1.4rem;
   margin: 0 auto;
   display: block;
-  padding: 12px 20px;
+  padding: 10px 20px;
   border-radius: 4px;
   border: none;
   font-weight: bold;
@@ -67,27 +68,13 @@
   transition: background .2s;
   font-family: "Segoe UI Emoji", "Helvetica Neue", Arial,
     "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  cursor: pointer;
 }
 .Contact_Button:hover {
   background: #000; 
 }
-@media (min-width: 600px) {
-  .Contact_Title {
-    font-size: 4rem;
-  }
-  .Contact_Text {
-    font-size: 1.6rem;
-    margin: 0 0 48px 0;
-  }
-  .Contact_InputText {
-    margin: 0 0 28px 0;
-  }
-  .Contact_Textarea {
-    margin: 0 0 28px 0;
-  }
-}
 
-
+/* Complete */
 .Complete {
   width: 100%;
   max-width: 400px;
@@ -95,39 +82,23 @@
   text-align: center;
 }
 .Complete_Icon {
-  width: 44px;
-  height: 44px;
+  margin: 0 0 12px 0;
 }
 .Complete_Title {
-  font-size: 3.4rem;
-  margin: 12px 0 4px 0;
-  padding: 0;
-  text-align: center;
+  font-size: 3rem;
   line-height: 1.5;
+  margin: 0 0 8px 0;
+  padding: 0;
 }
 .Complete_Text {
-  font-size: 1.4rem;
-  margin: 0 0 28px 0;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin: 0;
   padding: 0;
   color: #888;
-  text-align: center;
 }
 .Complete_Link {
+  margin: 32px 0 0 0;
   font-size: 1.4rem;
   text-align: center;
-}
-@media (min-width: 600px) {
-  .Complete_Icon {
-    width: 50px;
-    height: 50px;
-  }
-  .Complete_Title {
-    font-size: 4rem;
-  }
-  .Complete_Text {
-    font-size: 1.6rem;
-  }
-  .Complete_Link {
-    font-size: 1.6rem;
-  }
 }
