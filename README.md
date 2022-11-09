@@ -12,8 +12,8 @@ Newt's starter
 
 ## 概要
 
-**newt-blog2-starter-nextjs**
-<br />Newtを利用した2カラム版のブログ
+**newt-contact-starter-nextjs**
+<br />NewtのForm Appを利用したシンプルなお問い合わせページ
 <br />技術構成： Next.js, TypeScript
 
 ## 開発をはじめる
