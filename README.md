@@ -1,34 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+  <a href="https://www.newt.so/">
+    <img src="https://user-images.githubusercontent.com/3859812/155490725-80ed1f06-996e-407f-8f63-fd54f0acaf14.svg" alt="Newt" width="70" height="57" />
+  </a>
+</p>
+<h3 align="center">
+Newt's starter
+</h3>
+<p align="center">
+  <a href="https://demo-newt-contact-starter-nextjs.vercel.app/">Demo</a> | <a href="https://www.newt.so/">Newt</a>
+</p>
 
-## Getting Started
+## 概要
 
-First, run the development server:
+**newt-blog2-starter-nextjs**
+<br />Newtを利用した2カラム版のブログ
+<br />技術構成： Next.js, TypeScript
+
+## 開発をはじめる
+
+### Step1: Newtスペースをセットアップ
+
+1. スペースを作成します
+    - スペースUIDを控えておきましょう。スペースUIDは 管理画面URL（ `https://app.newt.so/{スペースUID}` ） もしくは スペース設定 > 一般 から確認できます。
+2. Appを作成します
+    - Appテンプレートから作成する場合、**Contact**を選択し「このテンプレートを追加」をクリックしてください。
+    - スクラッチで作成する場合は、Form Appを選択してAppを新規作成します。
+3. フォームを作成します
+    - 作成したForm Appのトップページより、フォームを作成します
+    - フォーム設定 > セットアップ よりAPIエンドポイントをコピーします
+
+### Step2: .envファイルを書き換える
+
+1. Step1で取得したAPIエンドポイントで環境変数を書き換えます
+
+.envファイルのAPIエンドポイントを実際の値で書き換えます
+```conf
+NEXT_PUBLIC_NEWT_FORM_ENDPOINT=APIエンドポイント
+
+```
+Next.jsにおける環境変数の扱いについては、[公式ドキュメント](https://nextjs.org/docs/basic-features/environment-variables)を参照してください。
+
+### Step3: devサーバーを起動する
+
+Yarnを使う
 
 ```bash
-npm run dev
-# or
-yarn dev
+# 依存パッケージをインストール
+$ yarn install
+
+# localhost:3000でdevサーバーを起動
+$ yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+NPMを使う
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+# 依存パッケージをインストール
+$ npm install
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+# localhost:3000でdevサーバーを起動
+$ npm run dev
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Step4: Staticなサイトを生成して起動
 
-## Learn More
+```bash
+# Staticなサイトを生成（SSG）
+$ yarn generate
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# サーバーを起動
+$ yarn start
+```
