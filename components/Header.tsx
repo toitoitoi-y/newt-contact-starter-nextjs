@@ -13,7 +13,7 @@ export function Header(): JSX.Element {
         </Link>
         <div className={styles.Link}>
           <a
-            href="https://github.com/Newt-Inc/newt-blog-starter-nextjs"
+            href="https://github.com/Newt-Inc/newt-contact-starter-nextjs"
             rel="noreferrer noopener"
             target="_blank"
           >
