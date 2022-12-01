@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import { Layout } from "../components/Layout";
 
@@ -28,7 +29,9 @@ const Home: NextPage = () => {
             Your submission has been received.
           </p>
           <div className={styles.Complete_Link}>
-            <a href="/">Back to Previous Page</a>
+            <Link href="/">
+              <a>Back to Previous Page</a>
+            </Link>
           </div>
         </div>
       </Layout>

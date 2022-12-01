@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import { Layout } from "../components/Layout";
 
@@ -26,7 +27,9 @@ const Home: NextPage = () => {
           <h1 className={styles.Complete_Title}>Unable to submit</h1>
           <p className={styles.Complete_Text}>Unable to complete operation.</p>
           <div className={styles.Complete_Link}>
-            <a href="/">Back to Previous Page</a>
+            <Link href="/">
+              <a>Back to Previous Page</a>
+            </Link>
           </div>
         </div>
       </Layout>
