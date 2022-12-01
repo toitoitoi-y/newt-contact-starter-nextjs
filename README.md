@@ -33,7 +33,7 @@ Newt's starter
 
 1. Step1で取得したAPIエンドポイントで環境変数を書き換えます
 
-.envファイルのAPIエンドポイントを実際の値で書き換えます
+.envファイルのAPIエンドポイントを実際の値（ `https://{spaceUid}.form.newt.so/v1/{formUid}` ）で書き換えます
 ```conf
 NEXT_PUBLIC_NEWT_FORM_ENDPOINT=APIエンドポイント
 
