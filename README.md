@@ -71,3 +71,7 @@ $ yarn generate
 # サーバーを起動
 $ yarn start
 ```
+
+## License
+
+[MIT License](https://github.com/Newt-Inc/newt-contact-starter-nextjs/blob/main/LICENSE)
