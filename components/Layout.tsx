@@ -1,8 +1,8 @@
-import { ReactNode } from "react";
-import styles from "../styles/Layout.module.css";
-import { Badge } from "./Badge";
-import { Footer } from "./Footer";
-import { Header } from "./Header";
+import { ReactNode } from 'react'
+import styles from '../styles/Layout.module.css'
+import { Badge } from './Badge'
+import { Footer } from './Footer'
+import { Header } from './Header'
 
 export function Layout({ children }: { children: ReactNode }): JSX.Element {
   return (
@@ -12,5 +12,5 @@ export function Layout({ children }: { children: ReactNode }): JSX.Element {
       <Footer />
       <Badge />
     </div>
-  );
+  )
 }

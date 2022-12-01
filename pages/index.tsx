@@ -1,46 +1,46 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import router from "next/router";
-import styles from "../styles/Home.module.css";
-import { Layout } from "../components/Layout";
-import { useCallback, useState } from "react";
+import type { NextPage } from 'next'
+import Head from 'next/head'
+import router from 'next/router'
+import styles from '../styles/Home.module.css'
+import { Layout } from '../components/Layout'
+import { useCallback, useState } from 'react'
 
 type SubmissionData = {
-  name: string;
-  email: string;
-  comment: string;
-};
+  name: string
+  email: string
+  comment: string
+}
 
 const Home: NextPage = () => {
   const [data, setData] = useState<SubmissionData>({
-    name: "",
-    email: "",
-    comment: "",
-  });
+    name: '',
+    email: '',
+    comment: '',
+  })
 
   const onSubmit = useCallback(async (data: SubmissionData) => {
     if (!data.name || !data.email || !data.comment) {
-      alert("Please fill in all fields.");
-      return;
+      alert('Please fill in all fields.')
+      return
     }
-    const formData = new FormData();
-    formData.append("name", data.name);
-    formData.append("email", data.email);
-    formData.append("comment", data.comment);
+    const formData = new FormData()
+    formData.append('name', data.name)
+    formData.append('email', data.email)
+    formData.append('comment', data.comment)
     await fetch(process.env.NEXT_PUBLIC_NEWT_FORM_ENDPOINT as string, {
-      method: "POST",
+      method: 'POST',
       body: formData,
       headers: {
-        Accept: "application/json",
+        Accept: 'application/json',
       },
     })
       .then((res) => {
-        router.push("/complete");
+        router.push('/complete')
       })
       .catch((err) => {
-        router.push("/complete_error");
-      });
-  }, []);
+        router.push('/complete_error')
+      })
+  }, [])
 
   return (
     <>
@@ -60,7 +60,7 @@ const Home: NextPage = () => {
               className={styles.Contact_InputText}
               value={data.name}
               onChange={(e) => {
-                setData({ ...data, name: e.target.value });
+                setData({ ...data, name: e.target.value })
               }}
               required
             />
@@ -70,7 +70,7 @@ const Home: NextPage = () => {
               className={styles.Contact_InputText}
               value={data.email}
               onChange={(e) => {
-                setData({ ...data, email: e.target.value });
+                setData({ ...data, email: e.target.value })
               }}
               required
             />
@@ -80,7 +80,7 @@ const Home: NextPage = () => {
               rows={4}
               value={data.comment}
               onChange={(e) => {
-                setData({ ...data, comment: e.target.value });
+                setData({ ...data, comment: e.target.value })
               }}
               required
             ></textarea>
@@ -88,8 +88,8 @@ const Home: NextPage = () => {
               type="submit"
               className={styles.Contact_Button}
               onClick={(e) => {
-                e.preventDefault();
-                onSubmit(data);
+                e.preventDefault()
+                onSubmit(data)
               }}
             >
               Submit
@@ -98,7 +98,7 @@ const Home: NextPage = () => {
         </div>
       </Layout>
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

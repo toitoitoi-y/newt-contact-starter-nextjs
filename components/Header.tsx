@@ -1,5 +1,5 @@
-import Link from "next/link";
-import styles from "../styles/Header.module.css";
+import Link from 'next/link'
+import styles from '../styles/Header.module.css'
 
 export function Header(): JSX.Element {
   return (
@@ -22,5 +22,5 @@ export function Header(): JSX.Element {
         </div>
       </div>
     </header>
-  );
+  )
 }
