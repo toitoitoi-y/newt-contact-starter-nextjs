@@ -13,36 +13,38 @@ Newt's starter
 ## 概要
 
 **newt-contact-starter-nextjs**
-<br />NewtのForm Appを利用したシンプルなお問い合わせページ
+<br />Newt の Form App を利用したシンプルなお問い合わせページ
 <br />技術構成： Next.js, TypeScript
 
 ## 開発をはじめる
 
-### Step1: Newtスペースをセットアップ
+### Step1: Newt スペースをセットアップ
 
 1. スペースを作成します
-    - スペースUIDを控えておきましょう。スペースUIDは 管理画面URL（ `https://app.newt.so/{スペースUID}` ） もしくは スペース設定 > 一般 から確認できます。
-2. Appを作成します
-    - Appテンプレートから作成する場合、**Contact**を選択し「このテンプレートを追加」をクリックしてください。
-    - スクラッチで作成する場合は、Form Appを選択してAppを新規作成します。
+   - スペース UID を控えておきましょう。スペース UID は 管理画面 URL（ `https://app.newt.so/{スペースUID}` ） もしくは スペース設定 > 一般 から確認できます。
+2. App を作成します
+   - App テンプレートから作成する場合、**Contact**を選択し「このテンプレートを追加」をクリックしてください。
+   - スクラッチで作成する場合は、Form App を選択して App を新規作成します。
 3. フォームを作成します
-    - 作成したForm Appのトップページより、フォームを作成します
-    - フォーム設定 > セットアップ よりAPIエンドポイントをコピーします
+   - 作成した Form App のトップページより、フォームを作成します
+   - フォーム設定 > セットアップ より API エンドポイントをコピーします
 
-### Step2: .envファイルを書き換える
+### Step2: .env ファイルを書き換える
 
-1. Step1で取得したAPIエンドポイントで環境変数を書き換えます
+1. Step1 で取得した API エンドポイントで環境変数を書き換えます
 
-.envファイルのAPIエンドポイントを実際の値（ `https://{spaceUid}.form.newt.so/v1/{formUid}` ）で書き換えます
+.env ファイルの API エンドポイントを実際の値（ `https://{spaceUid}.form.newt.so/v1/{formUid}` ）で書き換えます
+
 ```conf
 NEXT_PUBLIC_NEWT_FORM_ENDPOINT=APIエンドポイント
 
 ```
-Next.jsにおける環境変数の扱いについては、[公式ドキュメント](https://nextjs.org/docs/basic-features/environment-variables)を参照してください。
 
-### Step3: devサーバーを起動する
+Next.js における環境変数の扱いについては、[公式ドキュメント](https://nextjs.org/docs/basic-features/environment-variables)を参照してください。
 
-Yarnを使う
+### Step3: dev サーバーを起動する
+
+Yarn を使う
 
 ```bash
 # 依存パッケージをインストール
@@ -52,7 +54,7 @@ $ yarn install
 $ yarn dev
 ```
 
-NPMを使う
+NPM を使う
 
 ```bash
 # 依存パッケージをインストール
@@ -62,7 +64,7 @@ $ npm install
 $ npm run dev
 ```
 
-### Step4: Staticなサイトを生成して起動
+### Step4: Static なサイトを生成して起動
 
 ```bash
 # Staticなサイトを生成（SSG）
