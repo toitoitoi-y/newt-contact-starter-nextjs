@@ -54,8 +54,11 @@ const Home: NextPage = () => {
             Please fill this form in a decent manner.
           </p>
           <form className={styles.Contact_Form}>
-            <label className={styles.Contact_Label}>Full Name*</label>
+            <label htmlFor="name" className={styles.Contact_Label}>
+              Full Name*
+            </label>
             <input
+              id="name"
               type="text"
               className={styles.Contact_InputText}
               value={data.name}
@@ -64,8 +67,11 @@ const Home: NextPage = () => {
               }}
               required
             />
-            <label className={styles.Contact_Label}>Email*</label>
+            <label htmlFor="email" className={styles.Contact_Label}>
+              Email*
+            </label>
             <input
+              id="email"
               type="email"
               className={styles.Contact_InputText}
               value={data.email}
@@ -74,8 +80,11 @@ const Home: NextPage = () => {
               }}
               required
             />
-            <label className={styles.Contact_Label}>Comment*</label>
+            <label htmlFor="comment" className={styles.Contact_Label}>
+              Comment*
+            </label>
             <textarea
+              id="comment"
               className={styles.Contact_Textarea}
               rows={4}
               value={data.comment}
